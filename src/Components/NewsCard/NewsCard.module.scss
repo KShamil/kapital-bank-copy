@@ -1,0 +1,53 @@
+.wrapper {
+    width: 303px;
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    cursor: pointer;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .day {
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--red);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            span {
+                font-size: 24px;
+            }
+        }
+
+        .month {
+            span {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .right {
+        span {
+            font-size: 16px;
+        }
+    }
+
+}
+
+.wrapper:hover .left .day {
+    background: var(--red);
+    color: #FFFFFF;
+}
+
+.wrapper:hover .right span {
+    color: var(--red);
+}

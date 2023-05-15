@@ -1,0 +1,63 @@
+.cardsCarousel {
+    margin-top: 50px;
+    background: linear-gradient(to bottom, #FFFFFF 50%, var(--light-gray) 50%);
+    padding-bottom: 20px;
+
+    .swiper {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        .btns {
+            position: absolute;
+            bottom: 40px;
+            right: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            z-index: 100;
+
+            .prevBtn,
+            .nextBtn {
+                width: 32px;
+                height: 32px;
+                border: none;
+                color: #bdc3c7;
+                font-size: 25px;
+                cursor: pointer;
+                background: transparent;
+
+                &:hover {
+                    color: var(--black);
+                }
+            }
+
+
+        }
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .cardsCarousel {
+        .swiper {
+            .btns {
+                width: 100%;
+                top: 0;
+                left: 0;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+// @media screen and (max-width:600px) {
+//     .cardsCarousel {
+//         .swiper {
+//             .btns {
+               
+//             }
+//         }
+//     }
+// }

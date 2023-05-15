@@ -1,0 +1,94 @@
+.headerBtn {
+    width: 100px;
+    padding: 7px;
+    background: var(--red);
+    font-size: 16px;
+    border-radius: 8px;
+    transition: 0.3 all;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+        background: var(--hover-red);
+    }
+}
+
+.sliderBtn {
+    width: 280px;
+    height: 55px;
+    padding: 11px 20px 14px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: var(--red);
+    transition: 0.3s all;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--hover-red);
+    }
+}
+
+.resultBtn {
+    width: 332px;
+    height: 55px;
+    padding: 11px 20px 14px;
+    font-size: 20px;
+    color: #FFFFFF;
+    background: var(--red);
+    transition: 0.3s all;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--hover-red);
+    }
+}
+
+.searchBtn {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--red);
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--red);
+}
+
+.calcBtn {
+    padding: 6px 25px 8px;
+    background: var(--light-gray);
+    border: none;
+    font-size: 16px;
+    border-radius: 37px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--red);
+        color: #FFFFFF;
+    }
+}
+
+.converterBtn {
+    padding: 10px 32px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--light-gray);
+    transition: 0.5s all;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+
+    &:hover {
+        color: #FFFFFF;
+        background-color: var(--red);
+    }
+}
+
+
+

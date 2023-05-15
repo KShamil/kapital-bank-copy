@@ -1,0 +1,24 @@
+.operations {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--light-gray) 50%, #FFFFFF 50%);
+
+    .content {
+        width: 78%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width:1450px) {
+   .operations {
+        .content {
+            width: 100%;
+            padding: 0 15px;
+        }
+   }
+}

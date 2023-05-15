@@ -1,0 +1,247 @@
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+
+    .leftCard {
+        position: relative;
+        width: 50%;
+        min-height: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--light-gray);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        .info {
+            width: 30%;
+            margin-left: 150px;
+            margin-bottom: 100px;
+
+            h2 {
+                font-size: 36px;
+                font-weight: bold;
+                white-space: nowrap;
+            }
+
+            span {
+                font-size: 14px;
+                overflow-wrap: break-word;
+            }
+
+            .link {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                gap: 10px;
+                left: 155px;
+                bottom: 40px;
+                color: var(--red);
+
+                &:hover {
+                    color: var(--black);
+                }
+            }
+        }
+
+        .image {
+            overflow: hidden;
+
+            .img {
+                position: absolute;
+                bottom: 0;
+                right: 120px;
+            }
+        }
+
+
+    }
+
+    .rightCard {
+        position: relative;
+        width: 50%;
+        min-height: 300px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--hover-red);
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+
+        .info {
+            width: 35%;
+            margin-left: 100px;
+            margin-bottom: 60px;
+
+            h2 {
+                white-space: nowrap;
+                font-size: 36px;
+                color: #FFFFFF;
+                font-weight: bold;
+
+            }
+
+            span {
+                color: #FFFFFF;
+                font-size: 14px;
+            }
+
+            .link {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+                gap: 10px;
+                left: 100px;
+                bottom: 40px;
+                color: #FFFFFF;
+            }
+        }
+
+        .image {
+
+            .img {
+                position: absolute;
+                bottom: 0;
+                right: 150px;
+            }
+        }
+
+    }
+}
+
+
+@media screen and (max-width:1450px) {
+    .wrapper {
+        flex-direction: column;
+       
+
+        .leftCard {
+            width: 100%;
+            border-radius: 0;
+
+            .info {
+                margin-left: 50px;
+
+                .link {
+                    left: 50px;
+                }
+            }
+        }
+
+        .rightCard {
+            width: 100%;
+            border-radius: 0;
+
+            .info {
+                margin-left: 50px;
+
+                .link {
+                    left: 50px;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+    .wrapper {
+
+        .leftCard {
+            .info {
+                margin-left: 10px;
+
+                .link {
+                    left: 10px;
+                }
+            }
+
+            .image {
+                .img {
+                    width: 138px;
+                    height: 175px;
+                }
+            }
+        }
+
+        .rightCard {
+            .info {
+                margin-left: 10px;
+
+                .link {
+                    left: 10px;
+                }
+            }
+
+            .image {
+                margin-right: 0;
+
+                .img {
+                    width: 138px;
+                    height: 175px;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width:600px) {
+    .wrapper {
+
+        .leftCard {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            .info {
+                width: 70%;
+                h2 {
+                    font-size: 15px;
+                }
+
+                span {
+                    font-size: 15px;
+                }
+            }
+
+            .image {
+                .img {
+                    right: 0;
+                }
+            }
+
+        }
+
+        .rightCard {
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            .info {
+                width: 70%;
+                h2 {
+                    font-size: 15px;
+                }
+
+                span {
+                    font-size: 15px;
+                }
+            }
+
+            .image {
+                .img {
+                    right: 0;
+                }
+            }
+
+        }
+    }
+
+
+}

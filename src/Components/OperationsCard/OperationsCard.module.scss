@@ -1,0 +1,52 @@
+.wrapper {
+    width: 202px;
+    height: 141px;
+    background-color: #FFFFFF;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 4px 12px hsla(0, 0%, 80%, .45);
+    cursor: pointer;
+    transition: 0.5s all;
+    border-radius: 8px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    .icon {
+        color: var(--red);
+        font-size: 40px;
+    }
+
+    .link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+}
+
+
+@media screen and (max-width:600px) {
+    .wrapper {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 12px;
+        gap: 40px;
+
+        .icon {
+            width: 42px;
+            height: 42px;
+        }
+    }
+}

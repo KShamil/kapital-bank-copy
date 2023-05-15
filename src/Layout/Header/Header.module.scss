@@ -1,0 +1,205 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .top {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+
+            .burgerBtn {
+                display: none;
+            }
+
+            .right {
+                .navList {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+
+                    .list {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+                        list-style: none;
+
+                        .listItem {
+                            display: flex;
+                            gap: 5px;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            font-size: 14px;
+
+                            .location {
+                                color: var(--red);
+                            }
+                        }
+
+                        .active {
+                            display: flex;
+                            gap: 5px;
+                            justify-content: center;
+                            align-items: center;
+                            cursor: pointer;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .btns {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 20px;
+
+                        .btn {
+                            border: none;
+                            background: transparent;
+                            cursor: pointer;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--light-gray);
+            padding: 15px;
+            border-bottom: 2px solid var(--white);
+
+            .content {
+                width: 79%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .bottomLeft {
+
+                    .bottomList {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 25px;
+                        list-style: none;
+                        font-size: 14px;
+                        font-weight: 400;
+
+                        li {
+                            position: relative;
+
+                            &::after {
+                                content: '';
+                                position: absolute;
+                                width: 100%;
+                                bottom: -23px;
+                                left: 0;
+                                height: 2px;
+                                background: var(--red);
+                                transform-origin: bottom right;
+                                transition: transform 0.25s ease-out;
+                                transform: scaleX(0);
+                            }
+
+                            &:hover::after {
+                                transform: scaleX(1);
+                                transform-origin: bottom left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1450px) {
+    .header {
+        .wrapper {
+            .top {
+                width: 100%;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .bottom {
+                .content {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:992px) {
+    .header {
+        .wrapper {
+            .top {
+
+                .burgerBtn {
+                    width: 32px;
+                    height: 32px;
+                    border: none;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 3px;
+                    background-color: var(--red);
+
+                    span {
+                        width: 18px;
+                        height: 2px;
+                        background: #FFFFFF;
+                    }
+                }
+
+                .left {
+                    .logo {
+                        width: 150px;
+                        height: 26px;
+                    }
+                }
+
+                .right {
+                    display: none;
+                }
+            }
+
+            .bottom {
+                display: none;
+            }
+        }
+    }
+}
+
+// @media screen and (max-width:600px) {
+//     .header {
+//         .wrapper {
+//             .top {
+                
+//             }
+
+//         }
+//     }
+// }
