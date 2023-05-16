@@ -8,3 +8,4 @@ export * from './CardsCarouselItems/CardsCarouselItems';
 export * from './DailyLoanItems/DailyLoanItems';
 export * from './NewsCard/NewsCard';
 export * from './NewsItems/NewsItems';
+export * from './MobileAccordion/MobileAccordion';

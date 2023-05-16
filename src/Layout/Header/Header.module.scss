@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -13,6 +14,7 @@
 
         .top {
             width: 80%;
+            min-height: 78px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -78,6 +80,7 @@
 
         .bottom {
             width: 100%;
+            min-height: 70px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -127,6 +130,12 @@
                 }
             }
         }
+
+
+    }
+
+    .mobileMenu {
+        display: none;
     }
 }
 
@@ -171,6 +180,43 @@
                         width: 18px;
                         height: 2px;
                         background: #FFFFFF;
+                        transition: 0.5s all;
+                    }
+                }
+
+                .closeBurgerBtn {
+                    width: 32px;
+                    height: 32px;
+                    border: none;
+                    border-radius: 8px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 3px;
+                    background-color: var(--red);
+
+                    span {
+                        width: 22px;
+                        height: 2px;
+                        background: #FFFFFF;
+                        transition: 0.5s all;
+                        position: absolute;
+                    }
+
+                    span:nth-child(1) {
+                        transform: rotate(45deg);
+                        top: calc(50% - 1px);
+                    }
+
+                    span:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    span:nth-child(3) {
+                        transform: rotate(-45deg);
+                        bottom: calc(50% - 1px);
+
                     }
                 }
 
@@ -190,6 +236,30 @@
                 display: none;
             }
         }
+
+        .mobileMenu {
+            display: block;
+            position: absolute;
+            top: 78px;
+            width: 100%;
+            height: auto;
+            background-color: #FFFFFF;
+            z-index: 100;
+            transform: translateX(992px);
+            transition: 0.5s all;
+        }
+
+        .openMobileMenu {
+            display: block;
+            position: absolute;
+            top: 78px;
+            width: 100%;
+            height: auto;
+            background-color: #FFFFFF;
+            z-index: 100;
+            transform: translateX(0);
+            transition: 0.5s all;
+        }
     }
 }
 
@@ -197,7 +267,7 @@
 //     .header {
 //         .wrapper {
 //             .top {
-                
+
 //             }
 
 //         }

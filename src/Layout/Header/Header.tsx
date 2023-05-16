@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { HeaderProps } from "./Header.props";
 import styles from "./Header.module.scss";
-import { Button } from "../../Components";
+import { Button, MobileAccordion } from "../../Components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLocationDot,
@@ -12,6 +12,12 @@ import Logo from "./Logo.svg";
 import Link from "next/link";
 
 export const Header = ({ ...props }: HeaderProps): JSX.Element => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <header {...props} className={styles.header}>
@@ -50,7 +56,9 @@ export const Header = ({ ...props }: HeaderProps): JSX.Element => {
                 </div>
               </div>
             </div>
-            <button className={styles.burgerBtn}>
+            <button className={`${styles.burgerBtn} ${
+          isOpen ? styles.closeBurgerBtn : ""
+        }`} onClick={toggleMenu}>
               <span></span>
               <span></span>
               <span></span>
@@ -91,6 +99,11 @@ export const Header = ({ ...props }: HeaderProps): JSX.Element => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={`${styles.mobileMenu} ${
+          isOpen ? styles.openMobileMenu : ""
+        }`}>
+          <MobileAccordion/>
         </div>
       </header>
     </>

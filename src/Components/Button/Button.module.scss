@@ -75,7 +75,8 @@
 }
 
 .converterBtn {
-    padding: 10px 32px;
+    width: 100%;
+    padding: 10px 28px;
     font-size: 16px;
     font-weight: 400;
     background-color: var(--light-gray);
@@ -83,12 +84,12 @@
     cursor: pointer;
     border: none;
     border-radius: 8px;
+    white-space: nowrap;
 
     &:hover {
         color: #FFFFFF;
         background-color: var(--red);
     }
 }
-
 
 

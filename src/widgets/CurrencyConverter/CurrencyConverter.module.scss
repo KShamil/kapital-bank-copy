@@ -109,10 +109,11 @@
                 align-items:center;
 
                 .top {
-                    width: 310px;
+                    width: 80%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
+                    gap: 5px;
                     background-color: #FFFFFF;
                     padding: 5px;
                     border-radius: 8px;
@@ -191,7 +192,7 @@
 @media screen and (max-width:992px) {
     .wrapper {
         .content {
-            flex-direction: column-reverse;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 20px;
@@ -202,6 +203,24 @@
 
             .right {
                 width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .wrapper {
+        .content {
+        
+            .right {
+                width: 100%;
+
+                .converter {
+                    .top {
+                        width: 100%;
+                        flex-direction: column;
+                    }
+                }
             }
         }
     }
