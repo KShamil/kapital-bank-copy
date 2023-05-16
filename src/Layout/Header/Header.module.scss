@@ -20,7 +20,7 @@
             align-items: center;
             padding: 20px;
 
-            .burgerBtn {
+            .mobileBlock {
                 display: none;
             }
 
@@ -131,6 +131,192 @@
             }
         }
 
+        .cardsSubmenu {
+            display: none;
+            position: absolute;
+            top: 148px;
+            width: 100%;
+            height: 300px;
+            background-color: #FFFFFF;
+            z-index: 100;
+        }
+
+        .showCardsMenu {
+            display: block;
+            position: absolute;
+            top: 148px;
+            width: 100%;
+            height: 300px;
+            background-color: #FFFFFF;
+            z-index: 100;
+        }
+
+        .creditSubmenu {
+            display: none;
+            position: absolute;
+            top: 148px;
+            width: 100%;
+            height: 300px;
+            background-color: #FFFFFF;
+            z-index: 100;
+        }
+
+        .showCreditSubmenu {
+            display: block;
+            position: absolute;
+            top: 148px;
+            width: 100%;
+            height: 300px;
+            background-color: #FFFFFF;
+            z-index: 100;
+        }
+
+        .search {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            background-color: #FFFFFF;
+            transform: translateY(-148px);
+            transition: 0.5s all;
+
+            .content {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+
+                .top {
+                    width: 100%;
+                    min-height: 78px;
+                    background-color: #FFFFFF;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    border-bottom: 3px solid var(--light-gray);
+
+                    .smallLogo {
+                        width: 37px;
+                        height: 37px;
+                    }
+
+                    input {
+                        width: 100%;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    .searchIcon {
+                        font-size: 20px;
+                    }
+
+                    .closeIcon {
+                        font-size: 22px;
+                        color: gray;
+                        cursor: pointer;
+                    }
+
+                    span {
+                        color: var(--red);
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    min-height: 70px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 20px;
+                    background-color: #FFFFFF;
+                    padding-left: 130px;
+                }
+            }
+        }
+
+        .openSearch {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+            background-color: #FFFFFF;
+            transform: translateY(0);
+            transition: 0.5s all;
+
+            .content {
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+
+                .top {
+                    width: 100%;
+                    min-height: 78px;
+                    background-color: #FFFFFF;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    border-bottom: 3px solid var(--light-gray);
+
+                    .smallLogo {
+                        width: 37px;
+                        height: 37px;
+                    }
+
+                    input {
+                        width: 100%;
+
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+
+                    .searchIcon {
+                        font-size: 20px;
+                    }
+
+                    .closeIcon {
+                        font-size: 22px;
+                        color: gray;
+                        cursor: pointer;
+                    }
+
+                    span {
+                        color: var(--red);
+                        font-size: 14px;
+                        cursor: pointer;
+                    }
+                }
+
+                .bottom {
+                    width: 100%;
+                    min-height: 70px;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    gap: 20px;
+                    background-color: #FFFFFF;
+                    padding-left: 130px;
+                }
+            }
+        }
+
 
     }
 
@@ -164,59 +350,71 @@
         .wrapper {
             .top {
 
-                .burgerBtn {
-                    width: 32px;
-                    height: 32px;
-                    border: none;
-                    border-radius: 8px;
+                .mobileBlock {
                     display: flex;
-                    flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    gap: 3px;
-                    background-color: var(--red);
+                    gap: 10px;
 
-                    span {
-                        width: 18px;
-                        height: 2px;
-                        background: #FFFFFF;
-                        transition: 0.5s all;
-                    }
-                }
-
-                .closeBurgerBtn {
-                    width: 32px;
-                    height: 32px;
-                    border: none;
-                    border-radius: 8px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 3px;
-                    background-color: var(--red);
-
-                    span {
-                        width: 22px;
-                        height: 2px;
-                        background: #FFFFFF;
-                        transition: 0.5s all;
-                        position: absolute;
+                    .bblogo {
+                        width: 32px;
+                        height: 32px;
                     }
 
-                    span:nth-child(1) {
-                        transform: rotate(45deg);
-                        top: calc(50% - 1px);
+                    .burgerBtn {
+                        width: 32px;
+                        height: 32px;
+                        border: none;
+                        border-radius: 8px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 3px;
+                        background-color: var(--red);
+
+                        span {
+                            width: 18px;
+                            height: 2px;
+                            background: #FFFFFF;
+                            transition: 0.5s all;
+                        }
                     }
 
-                    span:nth-child(2) {
-                        opacity: 0;
-                    }
+                    .closeBurgerBtn {
+                        width: 32px;
+                        height: 32px;
+                        border: none;
+                        border-radius: 8px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 3px;
+                        background-color: var(--red);
 
-                    span:nth-child(3) {
-                        transform: rotate(-45deg);
-                        bottom: calc(50% - 1px);
+                        span {
+                            width: 22px;
+                            height: 2px;
+                            background: #FFFFFF;
+                            transition: 0.5s all;
+                            position: absolute;
+                        }
 
+                        span:nth-child(1) {
+                            transform: rotate(45deg);
+                            top: calc(50% - 1px);
+                        }
+
+                        span:nth-child(2) {
+                            opacity: 0;
+                        }
+
+                        span:nth-child(3) {
+                            transform: rotate(-45deg);
+                            bottom: calc(50% - 1px);
+
+                        }
                     }
                 }
 

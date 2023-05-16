@@ -92,4 +92,21 @@
     }
 }
 
+.searchBlockBtn {
+    padding: 8px 12px;
+    background: var(--light-gray);
+    border: none;
+    font-size: 14px;
+    line-height: 14px;
+    border-radius: 27px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: var(--hover-red);
+        color: #FFFFFF;
+    }
+}
+
+
 
