@@ -13,12 +13,11 @@ import Logo from "./Logo.svg";
 import Link from "next/link";
 import SmalLLogo from "./small-logo.svg";
 import bbLogo from "./bblogo.png";
+import BirBankCash from "./birbank-cashback-debet.png";
 
 export const Header = ({ ...props }: HeaderProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isShowCardsSubmenu, setIsShowCardsSubmenu] = useState<boolean>(false);
-  const [isShowCreditSubmenu, setIsShowCreditSubmenu] =
-    useState<boolean>(false);
   const [isOpenSearch, setIsOpenSearch] = useState<boolean>(false);
 
   const hoverTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -49,26 +48,6 @@ export const Header = ({ ...props }: HeaderProps): JSX.Element => {
 
   const handleShowCardsSubmenuLeave = () => {
     setIsShowCardsSubmenu(false);
-  };
-
-  const handleShowCreditSubmenuLinkHover = () => {
-    clearTimeout(hoverTimeoutRef.current!);
-    setIsShowCreditSubmenu(true);
-  };
-
-  const handleShowCreditSubmenuLinkLeave = () => {
-    hoverTimeoutRef.current = setTimeout(() => {
-      setIsShowCreditSubmenu(false);
-    }, 50);
-  };
-
-  const handleShowCreditSubmenuHover = () => {
-    clearTimeout(hoverTimeoutRef.current!);
-    setIsShowCreditSubmenu(true);
-  };
-
-  const handleShowCreditSubmenuLeave = () => {
-    setIsShowCreditSubmenu(false);
   };
 
   const toggleMenu = () => {
@@ -140,10 +119,7 @@ export const Header = ({ ...props }: HeaderProps): JSX.Element => {
                   >
                     <Link href="">KARTLAR</Link>
                   </li>
-                  <li
-                    onMouseEnter={handleShowCreditSubmenuLinkHover}
-                    onMouseLeave={handleShowCreditSubmenuLinkLeave}
-                  >
+                  <li>
                     <Link href="">KREDİTLƏR</Link>
                   </li>
                   <li>
@@ -178,16 +154,56 @@ export const Header = ({ ...props }: HeaderProps): JSX.Element => {
             onMouseEnter={handleShowCardsSubmenuHover}
             onMouseLeave={handleShowCardsSubmenuLeave}
           >
-            Submenu
-          </div>
-          <div
-            className={`${styles.creditSubmenu} ${
-              isShowCreditSubmenu ? styles.showCreditSubmenu : ""
-            } `}
-            onMouseEnter={handleShowCreditSubmenuHover}
-            onMouseLeave={handleShowCreditSubmenuLeave}
-          >
-            Credit
+            <div className={styles.container}>
+              <div className={styles.left}>
+                <div className={styles.links}>
+                  <ul className={styles.list}>
+                    <li>
+                      <strong>Taksit kartlar</strong>
+                    </li>
+                    <li>
+                      <strong>Debet kartlar</strong>
+                    </li>
+                    <li>
+                      <strong>Digital kart</strong>
+                    </li>
+                    <li>Hədiyyə kartı</li>
+                  </ul>
+                  <ul className={styles.list}>
+                    <li>Kartın müddətinin uzadılması</li>
+                    <li>Kartlar üzrə xidmətlər</li>
+                    <li>Təhlükəsizlik qaydaları</li>
+                    <li>3D secure</li>
+                  </ul>
+                  <ul className={styles.list}>
+                    <li>Kart sifarişi</li>
+                  </ul>
+                </div>
+              </div>
+              <div className={styles.right}>
+                <div className={styles.info}>
+                  <div className={styles.descr}>
+                    <h3>Birbank Cashback taksit</h3>
+                    <span>
+                      Kartla edilən nağdsız ödənişlərə minimum 1.5%-dən başlayan
+                      keşbek, faizsiz və komissiyasız taksit imkanı verən unikal
+                      bir kartdır.
+                    </span>
+                  </div>
+                  <Button appearance="submenu-btn">
+                    Bir kliklə sifariş et
+                  </Button>
+                </div>
+                <div className={styles.image}>
+                  <Image
+                    src={BirBankCash}
+                    alt="error"
+                    width={126}
+                    height={200}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div
             className={`${styles.search} ${
@@ -205,7 +221,7 @@ export const Header = ({ ...props }: HeaderProps): JSX.Element => {
                   icon={faMagnifyingGlass}
                   className={styles.searchIcon}
                 />
-                <input type="text" placeholder="Sorğunuzu daxil edin" />
+                <input type="text" autoComplete="off" placeholder="Sorğunuzu daxil edin"/>
                 <span>Axtar</span>
                 <FontAwesomeIcon
                   icon={faCircleXmark}

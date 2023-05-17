@@ -109,4 +109,20 @@
 }
 
 
+.submenuBtn {
+    width: 200px;
+    height: 45px;
+    font-size: 17px;
+    color: #FFFFFF;
+    background: var(--red);
+    transition: 0.3s all;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--hover-red);
+    }
+}
+
 

@@ -19,6 +19,7 @@ export const Button = ({
         [styles.resultBtn]: appearance == "result-btn",
         [styles.converterBtn]: appearance == "converter-btn",
         [styles.searchBlockBtn]: appearance == "search-block-btn",
+        [styles.submenuBtn]: appearance == "submenu-btn",
       })}
       {...props}
     >
