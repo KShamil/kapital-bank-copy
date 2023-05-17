@@ -11,7 +11,7 @@ import HumanImg from "../../assets/Images/info-cards-img/90789318742-min.webp";
 export const InfoCards = ({ ...props }: InfoCardsProps): JSX.Element => {
   return (
     <>
-      <div className={styles.wrapper} {...props}>
+      <section className={styles.wrapper} {...props}>
         <div className={styles.leftCard}>
           <div className={styles.info}>
             <h2>Onlayn kredit ödənişi</h2>
@@ -19,7 +19,7 @@ export const InfoCards = ({ ...props }: InfoCardsProps): JSX.Element => {
               Banka gəlmədən və növbələrdə vaxt itirmədən kartınızla 4 addıma
               kredit borcunuzun ödənişi.
             </span>
-            <div >
+            <div>
               <Link href="" className={styles.link}>
                 <span>Ödəniş et</span>
                 <FontAwesomeIcon icon={faArrowRight} />
@@ -27,13 +27,23 @@ export const InfoCards = ({ ...props }: InfoCardsProps): JSX.Element => {
             </div>
           </div>
           <div className={styles.image}>
-            <Image className={styles.img} src={CashPaimentImg} alt="error" width={200} height={288}/>
+            <Image
+              className={styles.img}
+              src={CashPaimentImg}
+              alt="error"
+              width={200}
+              height={288}
+            />
           </div>
         </div>
         <div className={styles.rightCard}>
           <div className={styles.info}>
             <h2>İnsan resursları</h2>
-            <span>Kapital Bankın peşəkarlar komandasına qoşulmaq istəyirsinizsə, Sizi müvafiq vakansiyaya müraciət etməyə dəvət edirik. Biz sizə dinamik mühitdə maraqlı və perspektivli iş təklif edirik.</span>
+            <span>
+              Kapital Bankın peşəkarlar komandasına qoşulmaq istəyirsinizsə,
+              Sizi müvafiq vakansiyaya müraciət etməyə dəvət edirik. Biz sizə
+              dinamik mühitdə maraqlı və perspektivli iş təklif edirik.
+            </span>
             <div>
               <Link href="" className={styles.link}>
                 <span>Daha ətraflı</span>
@@ -42,10 +52,16 @@ export const InfoCards = ({ ...props }: InfoCardsProps): JSX.Element => {
             </div>
           </div>
           <div className={styles.image}>
-            <Image className={styles.img} src={HumanImg} alt="error" width={200} height={224}/>
+            <Image
+              className={styles.img}
+              src={HumanImg}
+              alt="error"
+              width={200}
+              height={224}
+            />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

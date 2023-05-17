@@ -5,10 +5,12 @@ import { OperationsCardItems } from "../../Components";
 
 export const Operations = ({ ...props }: OperationsProps): JSX.Element => {
   return (
-    <section {...props} className={styles.operations}>
-      <div className={styles.content}>
-        <OperationsCardItems />
-      </div>
-    </section>
+    <>
+      <section {...props} className={styles.wrapper}>
+        <div className={styles.content}>
+          <OperationsCardItems />
+        </div>
+      </section>
+    </>
   );
 };

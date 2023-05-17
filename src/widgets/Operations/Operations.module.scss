@@ -1,4 +1,4 @@
-.operations {
+.wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -15,7 +15,7 @@
 
 
 @media screen and (max-width:1450px) {
-   .operations {
+   .wrapper {
         .content {
             width: 100%;
             padding: 0 15px;

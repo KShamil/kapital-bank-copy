@@ -8,11 +8,13 @@ export const OperationsCardItems = ({
   ...props
 }: OperationsCardItemsProps): JSX.Element => {
   return (
-    <div {...props} className={styles.wrapper}>
-      {operationsCardData &&
-        operationsCardData.map((item) => (
-          <OperationsCard data={item} key={item.id} />
-        ))}
-    </div>
+    <>
+      <div {...props} className={styles.wrapper}>
+        {operationsCardData &&
+          operationsCardData.map((item) => (
+            <OperationsCard data={item} key={item.id} />
+          ))}
+      </div>
+    </>
   );
 };

@@ -9,7 +9,6 @@ export const CardsCarouselItems = ({
   ...props
 }: CardsCarouselItemsProps): JSX.Element => {
   const {
-    id,
     img,
     title,
     strong,
@@ -23,38 +22,46 @@ export const CardsCarouselItems = ({
     link,
   } = data;
   return (
-    <div {...props} className={styles.wrapper}>
-      <div className={styles.content}>
-        <div className={styles.left}>
-          <div className={styles.top}>
-            <h2>
-              <span>{title}</span>
-              <strong>{strong}</strong>
-            </h2>
-            <p>{descr}</p>
-          </div>
-          <div className={styles.bottom}>
-            <div className={styles.infoList}>
-              <div className={styles.info}>
-                <h4>{subtitle1}</h4>
-                <span>{info1}</span>
-              </div>
-              <div className={styles.info}>
-                <h4>{subtitle2}</h4>
-                <span>{info2}</span>
-              </div>
-              <div className={styles.info}>
-                <h4>{subtitle3}</h4>
-                <span>{info3}</span>
-              </div>
+    <>
+      <div {...props} className={styles.wrapper}>
+        <div className={styles.content}>
+          <div className={styles.left}>
+            <div className={styles.top}>
+              <h2>
+                <span>{title}</span>
+                <strong>{strong}</strong>
+              </h2>
+              <p>{descr}</p>
             </div>
-            <Button appearance="slider-btn">{link}</Button>
+            <div className={styles.bottom}>
+              <div className={styles.infoList}>
+                <div className={styles.info}>
+                  <h4>{subtitle1}</h4>
+                  <span>{info1}</span>
+                </div>
+                <div className={styles.info}>
+                  <h4>{subtitle2}</h4>
+                  <span>{info2}</span>
+                </div>
+                <div className={styles.info}>
+                  <h4>{subtitle3}</h4>
+                  <span>{info3}</span>
+                </div>
+              </div>
+              <Button appearance="slider-btn">{link}</Button>
+            </div>
           </div>
-        </div>
-        <div className={styles.right}>
-          <Image className={styles.img} src={img} alt="error" width={320} height={320} />
+          <div className={styles.right}>
+            <Image
+              className={styles.img}
+              src={img}
+              alt="error"
+              width={320}
+              height={320}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
