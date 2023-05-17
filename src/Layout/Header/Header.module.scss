@@ -181,6 +181,7 @@
             z-index: 100;
             background-color: #FFFFFF;
             transform: translateY(-148px);
+            opacity: 0;
             transition: 0.5s all;
 
             .content {
@@ -254,6 +255,7 @@
             z-index: 100;
             background-color: #FFFFFF;
             transform: translateY(0);
+            opacity: 1;
             transition: 0.5s all;
 
             .content {
@@ -433,6 +435,18 @@
             .bottom {
                 display: none;
             }
+
+            .search {
+                .content {
+                    width: 100%;
+                    padding: 0 15px;
+
+
+                    .bottom {
+                        display: none;
+                    }
+                }
+            }
         }
 
         .mobileMenu {
@@ -461,13 +475,21 @@
     }
 }
 
-// @media screen and (max-width:600px) {
-//     .header {
-//         .wrapper {
-//             .top {
+@media screen and (max-width:600px) {
+    .header {
+        .wrapper {
+            .top {
+                .smallLogo {
+                    display: none;
+                }
+                input {
+                    font-size: 14px;
+                    &::placeholder {
+                        font-size: 12px;
+                    }
+                }
+            }
 
-//             }
-
-//         }
-//     }
-// }
+        }
+    }
+}

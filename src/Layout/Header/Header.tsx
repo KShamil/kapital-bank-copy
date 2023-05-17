@@ -12,7 +12,7 @@ import Image from "next/image";
 import Logo from "./Logo.svg";
 import Link from "next/link";
 import SmalLLogo from "./small-logo.svg";
-import bbLogo from './bblogo.png';
+import bbLogo from "./bblogo.png";
 
 export const Header = ({ ...props }: HeaderProps): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -114,7 +114,10 @@ export const Header = ({ ...props }: HeaderProps): JSX.Element => {
               </div>
             </div>
             <div className={styles.mobileBlock}>
-              <Image src={bbLogo} alt='error' className={styles.bblogo}/>
+              <Button appearance="search-btn" onClick={handleOpenSearch}>
+                <FontAwesomeIcon icon={faMagnifyingGlass} />
+              </Button>
+              <Image src={bbLogo} alt="error" className={styles.bblogo} />
               <button
                 className={`${styles.burgerBtn} ${
                   isOpen ? styles.closeBurgerBtn : ""
